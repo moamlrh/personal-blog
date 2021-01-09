@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&display=swap");
+
+.home {
+  background-image: url("../../images/bg.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  .text {
+    color: white;
+    text-align: center;
+    h1 {
+      font-weight: 500;
+      font-size: 50px;
+      width: 60%;
+      margin: auto;
+      span {
+        font-family: "Playfair Display";
+      }
+    }
+  }
+  @media all and (max-width: 750px) {
+    .text {
+      h1 {
+        font-size: 50px;
+        width: 80%;
+        margin: auto;
+      }
+    }
+  }
+}

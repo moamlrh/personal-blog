@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&display=swap");
+.sorted {
+  margin: 30px auto;
+  .title {
+    text-align: center;
+    font-weight: 500;
+    font-size: 30px;
+    width: 70%;
+    margin: 30px auto;
+    @media all and (max-width: 800px) {
+      font-size: 20px;
+      width: 90%;
+    }
+    span {
+      font-family: "Playfair Display";
+      font-weight: 600;
+    }
+  }
+}
+.sorted .articles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  .article {
+    .image {
+      overflow: hidden;
+      width: 100%;
+      cursor: pointer;
+      position: relative;
+      img {
+        width: 100%;
+      }
+      span {
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #2890ffc4;
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        * {
+          font-size: 70px;
+          color: white;
+        }
+      }
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+        span {
+          opacity: 1;
+        }
+      }
+    }
+    .info {
+      width: 100%;
+      padding: 10px 0;
+      span {
+        color: gray;
+      }
+      h2 {
+        font-size: 26px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        color: rgb(41, 41, 41);
+        &:hover {
+          color: #2890ffc4;
+        }
+      }
+      p {
+        color: gray;
+        font-size: 16px;
+        margin: 10px auto;
+      }
+      .comments {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 20px;
+        .tages {
+          display: flex;
+          span {
+            margin-left: 10px;
+          }
+        }
+
+        * {
+          color: gray;
+          cursor: pointer;
+        }
+
+        & > *:last-child {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}
+
+.sorted {
+  @media all and (max-width: 800px) {
+    .articles {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .article {
+      margin: 20px auto;
+    }
+  }
+  @media all and (max-width: 500px) {
+    .articles {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

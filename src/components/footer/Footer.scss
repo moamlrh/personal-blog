@@ -1,0 +1,120 @@
+.footer {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  background-color: #262626 !important;
+  color: white !important;
+}
+.footer-bg{
+  background-color: #262626;
+  width: 100%;
+}
+.footer .logo {
+  width: 100%;
+  h1 {
+    padding: 20px 0px;
+  }
+  p {
+    color: rgba(255, 255, 255, 0.774);
+    margin: 20px auto;
+  }
+  .icons {
+    padding: 20px 0px;
+    * {
+      cursor: pointer;
+      font-size: 30px;
+      margin-right: 20px;
+    }
+  }
+}
+.footer .recent-posts {
+  text-align: left;
+  .title {
+    h1 {
+      padding: 20px 0;
+    }
+  }
+  .posts {
+    width: 100%;
+    .post {
+      display: flex;
+      align-items: center;
+      text-align: left;
+      width: 100%;
+      margin-top: 20px;
+      .image {
+        overflow: hidden;
+        margin-right: 10px;
+        width: 130px;
+        height: 90px;
+        cursor: pointer;
+        border-radius: 50%;
+        position: relative;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+        span {
+          opacity: 0;
+          width: 100%;
+          height: 100%;
+          background-color: #2890ffc4;
+          position: absolute;
+          left: 0;
+          top: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          * {
+            font-size: 70px;
+            color: white;
+          }
+        }
+        &:hover {
+          img {
+            transform: scale(1.1);
+          }
+          span {
+            opacity: 1;
+          }
+        }
+      }
+      .info {
+        text-align: left;
+        width: 100%;
+        span {
+          font-size: 16px;
+          color: #288df893;
+        }
+        h2 {
+          font-size: 18px;
+          color: rgb(248, 248, 248);
+        }
+      }
+    }
+  }
+}
+.footer .tags {
+  padding: 10px;
+  h1 {
+    padding: 20px 0;
+  }
+  span {
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(172, 172, 172, 0.247);
+    float: left;
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    cursor: pointer;
+  }
+}
+
+.footer {
+  @media all and (max-width: 800px) {
+    grid-template-columns: repeat(1, 1fr) !important;
+    text-align: left;
+  }
+}
